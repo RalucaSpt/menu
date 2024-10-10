@@ -70,7 +70,19 @@
     display: block;
   }
   
-
+  .menu .submenu a::after {
+    content: '\25B6'; 
+    float: right;
+    transition: transform 0.3s;
+  }
+  
+  .menu li.open > a::after {
+    transform: rotate(90deg);
+  }
+  
+  .menu .subsubmenu a::after {
+    content: '';
+  }
   
   
   
