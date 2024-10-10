@@ -83,6 +83,43 @@
   .menu .subsubmenu a::after {
     content: '';
   }
+
+  @media screen and (max-width: 700px) {
+    .menu {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        display: none;
+    }
+  
+    button {
+        display: block;
+        background-color: transparent;
+        color: black;
+        padding: 10px;
+        border: none;
+    }
+  
+    .menu a::after {
+        content: '\25B6'; 
+        float: right;
+        transition: transform 0.3s;
+    }
+  
+    .menu li.open > a::after {
+        transform: rotate(90deg);
+    }
+    
+    .menu .submenu a::after {
+        content: '\25B6';
+    }
+  
+    .menu .subsubmenu a::after {
+        content: '';
+    }
+  }
   
   
   
